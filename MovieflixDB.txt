@@ -1,0 +1,96 @@
+CREATE DATABASE MovieFlixDB
+
+USE MovieFlixDB
+
+CREATE TABLE Usuario (
+id int NOT NULL,
+cpf int NOT NULL,
+nome varchar(255),
+email varchar(255),
+senha varchar(255),
+PRIMARY KEY (id)
+);
+
+CREATE TABLE Filme (
+cod_filme int NOT NULL,
+titulo varchar(255),
+imagem int NOT NULL,
+descricao varchar(255),
+genero varchar(255,)
+PRIMARY KEY (cod_filme)
+);
+
+CREATE TABLE FilmeFavoritado (
+id int NOT NULL,
+titulo varchar(255),
+imagem int NOT NULL,
+PRIMARY KEY (id)
+);
+
+INSERT INTO Usuario (id, cpf, nome, email, senha)
+VALUES (1, 09867970063, 'Tom B. Erichsen', 'virginija2079@uorak.com', 'Teste teste');
+
+INSERT INTO Usuario (id, cpf, nome, email, senha)
+VALUES (2, 09867970063, 'Tom B. Erichsen', 'virginija2079@uorak.com', 'Teste teste');
+
+INSERT INTO Usuario (id, cpf, nome, email, senha)
+VALUES (3, 09867970063, 'Tom B. Erichsen', 'virginija2079@uorak.com', 'Teste teste');
+
+INSERT INTO Usuario (id, cpf, nome, email, senha)
+VALUES (4, 09867970063, 'Tom B. Erichsen', 'virginija2079@uorak.com', 'Teste teste');
+
+INSERT INTO Usuario (id, cpf, nome, email, senha)
+VALUES (5, 09867970063, 'Tom B. Erichsen', 'virginija2079@uorak.com', 'Teste teste');
+
+
+INSERT INTO Filme (cod_filme, titulo, imagem, descricao, genero)
+VALUES (1, 'filme', 1, 'djfwsbedfibedfn', 'drama');
+
+INSERT INTO Filme (cod_filme, titulo, imagem, descricao, genero)
+VALUES (2, 'filme', 1, 'djfwsbedfibedfn', 'drama');
+
+INSERT INTO Filme (cod_filme, titulo, imagem, descricao, genero)
+VALUES (3, 'filme', 1, 'djfwsbedfibedfn', 'drama');
+
+INSERT INTO Filme (cod_filme, titulo, imagem, descricao, genero)
+VALUES (4, 'filme', 1, 'djfwsbedfibedfn', 'drama');
+
+INSERT INTO Filme (cod_filme, titulo, imagem, descricao, genero)
+VALUES (5, 'filme', 1, 'djfwsbedfibedfn', 'drama');
+
+INSERT INTO Filme (cod_filme, titulo, imagem, descricao, genero)
+VALUES (6, 'filme', 1, 'djfwsbedfibedfn', 'drama');
+
+INSERT INTO Filme (cod_filme, titulo, imagem, descricao, genero)
+VALUES (7, 'filme', 1, 'djfwsbedfibedfn', 'drama');
+
+INSERT INTO Filme (cod_filme, titulo, imagem, descricao, genero)
+VALUES (8, 'filme', 1, 'djfwsbedfibedfn', 'drama');
+
+INSERT INTO Filme (cod_filme, titulo, imagem, descricao, genero)
+VALUES (9, 'filme', 1, 'djfwsbedfibedfn', 'drama');
+
+INSERT INTO Filme (cod_filme, titulo, imagem, descricao, genero)
+VALUES (10, 'filme', 1, 'djfwsbedfibedfn', 'drama');
+
+SELECT nome FROM Usuario WHERE nome = "Paulo";
+
+SELECT titulo FROM Filme WHERE titulo = "A era do gelo";
+
+UPDATE Filme
+
+SET titulo = 'Vingadores: Ultimato'
+SET descricao = 'Após Thanos eliminar metade das criaturas vivas, os Vingadores têm de lidar com a perda de amigos e entes queridos. Com Tony Stark vagando perdido no espaço sem água e comida, Steve Rogers e Natasha Romanov lideram a resistência contra o titã louco.'
+
+WHERE cod_filme = 3;
+
+DELETE FROM Usuario WHERE id = 2;
+
+INSERT INTO FilmeFavoritado (id, titulo, imagem)
+VALUES(3, 'Vingadores: Ultimato', 1);
+
+INSERT INTO FilmeFavoritado (id, titulo, imagem)
+VALUES(9, 'filme', 1);
+
+
+
